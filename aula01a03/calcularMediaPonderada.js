@@ -22,4 +22,10 @@ numeroQuatro = 25;
 mediaPonderada = ((numeroUm * 1) + (numeroDois * 2) + (numeroTres * 3) + (numeroQuatro * 4)) / (1 + 2 + 3 + 4);
 
 // saida
+console.log(numeroUm);
+console.log(numeroDois);
+console.log(numeroTres);
+console.log(numeroQuatro);
 console.log(mediaPonderada);
+
+

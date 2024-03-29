@@ -42,6 +42,8 @@ btn.addEventListener('click', function () {
 
     // fim do meu codigo javascript
 
+
+    
     // deixar aqui
     alert(mediaPonderada);
     showResultado(mediaPonderada);

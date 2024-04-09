@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lógica e Algoritmos - Exercícios</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        <!-- insira seu código aqui -->
+        let valor1;
+        let valor2;
+        let valor3;
+        let menor;
+        let maior;
+
+        // iniciar
+        valor1 = 0;
+        valor2 = 0;
+        valor3 = 0;
+        menor = 0;
+        maior = 0;
+
+        // entrada
+        valor1 = prompt("Informe o primeiro valor");
+        valor2 = prompt("Informe o segundo  valor");
+        valor3 = prompt("Informe o terceiro valor");
+
+        valor1 = parseInt(valor1);
+        valor2 = parseInt(valor2);
+        valor3 = parseInt(valor3);
+
+        // processamento
+        menor = valor1;
+        maior = valor1;
+
+        // verificar menor
+        if (menor > valor2) {
+            menor = valor2;
+        }
+        if (menor > valor3) {
+            menor = valor3; 
+        }
+
+        // verificar maior
+        if (maior < valor2) {
+            maior = valor2;
+        }
+        if (maior < valor3 ) {
+            maior = valor3;
+        }
+
+        //  
+        alert("O menor valor é : " + menor + " / O maior valor é : " + maior);
+        document.write("O menor valor é : " + menor + " / O maior valor é : " + maior );
+    </script>
+    
+</body>
+</html>

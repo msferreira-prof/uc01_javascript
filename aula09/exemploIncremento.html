@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lógica e Algoritmos - Exercícios</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        <!-- insira seu código aqui -->
+        var numero1 = 10;
+        var numero2 = 20;
+        var soma = 0;
+
+        document.writeln("<p>" + "Numero 01..." + numero1 + "</p>");
+        document.writeln("<p>" + "Numero 02..." + numero2 + "</p>");
+        soma = numero1 + numero2;
+        document.writeln("<p>" + "Soma..." + soma + "</p>");
+        
+        document.writeln("<hr>");
+
+        document.writeln("<p>Pré-incremento</p>");
+        document.writeln("<p>" + "Numero 01............ " + numero1 + "</p>");
+        document.writeln("<p>" + "Numero 02.....(antes) " + numero2 + "</p>");
+        soma = numero1 + ++numero2;
+        document.writeln("<p>" + "Soma..." + soma + "</p>");
+        document.writeln("<p>" + "Numero 02.....(depois) " + numero2 + "</p>");
+
+        document.writeln("<hr>");
+
+        document.writeln("<p>Pós-incremento</p>");
+        document.writeln("<p>" + "Numero 01............ " + numero1 + "</p>");
+        document.writeln("<p>" + "Numero 02.....(antes) " + numero2 + "</p>");
+        soma = numero1 + numero2++;
+        document.writeln("<p>" + "Soma..." + soma + "</p>");
+        
+        document.writeln("<p>" + "Numero 02... (depois) " + numero2 + "</p>");
+        
+        document.writeln("<hr>");
+
+        document.writeln("<p>" + "Numero 01..." + numero1 + "</p>");
+        document.writeln("<p>" + "Numero 02..." + numero2 + "</p>");
+
+        soma = numero1 + numero2;
+        document.writeln("<p>" + "Soma..." + soma + "</p>");
+    </script>
+    
+</body>
+</html>

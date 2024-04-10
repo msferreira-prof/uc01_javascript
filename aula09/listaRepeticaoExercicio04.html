@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lógica e Algoritmos - Exercícios</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        <!-- insira seu código aqui -->
+        var nome;
+        var valorCompra;
+        var desconto;
+        var valorPagar;
+        var totalArrecadado = 0;
+
+        for(var contador = 0; contador < 2; contador++) {
+            nome = prompt("Informe o nome do Cliente");
+            valorCompra = prompt("Informe o valor da compra do Sr(a) " + nome);
+            valorCompra = parseFloat(valorCompra);
+
+            // calcular desconto
+            if (valorCompra >= 250) {
+                desconto = valorCompra * 25 / 100;
+            } else {
+                desconto = valorCompra * 15 / 100;
+            }
+
+            // calcular valor a pagar
+            valorPagar = valorCompra - desconto;
+
+            // exibir cliente
+            document.writeln("<p>");
+            document.writeln("Cliente : " + nome + "<br>");
+            document.writeln("Compra : "  + valorCompra + "<br>");
+            document.writeln("Desconto : "  + desconto + "<br>");
+            document.writeln("A Pagar : "  + valorPagar + "<br>");
+            document.writeln("</p>");
+
+            // calcular valor arrecadado pela Loja
+            totalArrecadado = totalArrecadado + valorPagar;
+        }
+
+        // exibir valor a receber
+        document.writeln("<p>");
+        document.writeln("A Receber : "  + totalArrecadado + "\n");
+        document.writeln("</p>");
+
+    </script>
+    
+</body>
+</html>

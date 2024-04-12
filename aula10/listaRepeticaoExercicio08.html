@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lógica e Algoritmos - Exercícios</title>
+</head>
+
+<body>
+    <!--
+        Para uma turma de 45 alunos, construir um algoritmo que determine:
+        a) Idade média dos alunos com altura menor que 1,70 m;
+        b) A altura média dos alunos com mais de vinte anos.
+    -->
+    <script type="text/javascript">
+        <!-- insira seu código aqui -->
+        // declarar variaveis
+        let idade;
+        let idadeMedia;
+        let somaIdade;
+        let altura;
+        let alturaMedia;
+        let somaAltura;
+        let qtdIdade;
+        let qtdAltura;
+
+        // iniciar variavies
+        idade = 0;
+        idadeMedia = 0;
+        altura = 0;
+        alturaMedia = 0;
+        qtdIdade = 0;
+        qtdAltura = 0;
+        somaIdade = 0;
+        somaAltura = 0;
+
+        let qtdAlunos = parseInt(prompt("Quantos alunos serão avaliados"));
+
+        // processamento de N alunos
+        for (var contador = 0; contador < qtdAlunos; contador++) { 
+            // entrada de dados 
+            idade  = prompt("Informe a idade do " + (contador+1) + "o. do aluno");
+            idade  = parseInt(idade); 
+            altura = prompt("Informe a altura do " + (contador+1) + "o. do aluno"); 
+            altura = parseFloat(altura); 
+            
+            // processamento
+            // verifica a idade do aluno 
+            if (altura < 1.70) { 
+                qtdIdade=qtdIdade + 1; // qtdIdade +=1 ou qtdIdade++
+                somaIdade = somaIdade + idade; // somaIdade +=idade 
+            } 
+            
+            // verifica a altura do aluno 
+            if (idade > 20) {
+                qtdAltura = qtdAltura + 1;
+                somaAltura = somaAltura + altura;
+            }
+        }
+
+        // calcular medias de idade e de altura
+        idadeMedia = somaIdade / qtdIdade;
+        if (isNaN(idadeMedia)) {
+            idadeMedia = 0;
+        }
+
+        alturaMedia = somaAltura / qtdAltura;
+        if (isNaN(alturaMedia)) {
+            alturaMedia = 0;
+        }
+
+        // saida de dados
+        alert("A idade média dos alunos menores que 1.70m é " + idadeMedia.toFixed(2));
+        alert("A altura média dos alunos com mais de 20 anos é " + alturaMedia.toFixed(2));
+    </script>
+</body>
+
+</html>

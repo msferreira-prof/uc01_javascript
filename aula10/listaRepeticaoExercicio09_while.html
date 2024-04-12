@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lógica e Algoritmos - Exercícios</title>
+</head>
+
+<body>
+    <!--
+    Um hotel cobra R$150,00 a diária e mais uma taxa de serviços. A taxa 
+    de serviços é de:
+        . R$8,00 por diária, se o número de diárias for < 15;
+        . R$6,30 por diária, se o número de diárias for = 15;
+        . R$5,00 por diária, se o número de diárias for > 15.
+    Construa um algoritmo que imprima o nome e a conta de cada cliente do hotel. 
+    Imprima também o total ganho pelo hotel.
+    -->
+    <script type="text/javascript">
+        <!-- insira seu código aqui -->
+        // declarar variaveis
+        const diaria = 150.0;
+        const taxaMaior15Dias = 8.0;
+        const taxaMenor15Dias = 5.0;
+        const taxa15Dias = 6.30;
+
+        let nome;
+        let conta;
+        let numeroDiarias;
+        let ganhoTotalHotel;
+        let taxaDiaria; 
+        let valorDiarias;
+        let valorTaxaDiarias;
+        let continua;
+
+        // iniciar variaveis
+        nome  = "";
+        conta = 0;
+        numeroDiarias = 0;
+        ganhoTotalHotel = 0;
+        taxaDiaria = 0;
+        valorDiarias = 0;
+        valorTaxaDiarias = 0; 
+        continua = "S";
+
+        // entrada de dados
+        while (continua == "S") {
+            nome = prompt("Informe o nome do cliente");
+            numeroDiarias = prompt("Informe o número de Diárias");
+            numeroDiarias = parseInt(numeroDiarias);
+
+            // processamento
+            // descobrir a taxa a ser utilizada
+            if (numeroDiarias == 15) {
+                taxaDiaria = taxa15Dias;
+            } else {
+                if (numeroDiarias < 15) {
+                    taxaDiaria = taxaMenor15Dias;
+                } else {
+                    taxaDiaria = taxaMaior15Dias;
+                }
+            }
+
+            // calcular a conta do cliente
+            valorDiarias = numeroDiarias * diaria;
+            valorTaxaDiarias = numeroDiarias * taxaDiaria;
+            conta = valorDiarias + valorTaxaDiarias;
+
+            // calcular ganho do hotel
+            ganhoTotalHotel = ganhoTotalHotel + conta;
+
+            // saida
+            document.writeln("<p>Nome do Cliente: " + nome + "</p>");
+            document.writeln("<p>Valor Conta: R$" + conta + "</p>");
+            document.writeln("<p>------------------------------------</p>");
+
+            continua = prompt("Digite 'S' para novo cliente ou 'N' para finalizar");
+        }
+     
+        document.writeln("<p>Ganho total do Hotel: R$" + ganhoTotalHotel + "</p>");
+        
+    </script>
+</body>
+
+</html>
